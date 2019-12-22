@@ -32,4 +32,10 @@ set consonant = differenceSet(letter, vowel);
 printf("vowels = "); printSet(vowel); nl();
 printf("consonants = "); printSet(consonant); nl();
 
+set darrell = insertSet(D, insertSet(A, insertSet(R, insertSet(R,
+insertSet(E, insertSet(L, insertSet(L, 0)))))));
+
+printf("me ⋂ vowels = "); printSet(intersectSet(darrell, vowel)); nl();
+printf("me ⋂ consonants = "); printSet(intersectSet(darrell, consonant)); nl();
+
 }
