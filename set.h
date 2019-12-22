@@ -9,7 +9,7 @@ typedef uint64_t set;
 static const uint32_t mask = 0x00000003f; // Sets are numbered bits 0 through 63
 
 static inline bool memberSet(uint32_t x, set s) {
-  return ((s & (0x1 << (x & mask))) >> (x & mask));
+  return (s & (0x1 << (x & mask)));
 }
 
 static inline set insertSet(uint32_t x, set s) {
