@@ -32,35 +32,19 @@ int main(void) {
 
   set consonant = differenceSet(letter, vowel);
 
-  printf("vowels = ");
-  printSet(vowel);
-  nl();
-  printf("consonants = ");
-  printSet(consonant);
-  nl();
+  printf("vowels = "); printSet(vowel); nl();
+  printf("consonants = "); printSet(consonant); nl();
 
-  set darrell = insertSet(
-      D,
-      insertSet(
-          A,
-          insertSet(
-              R, insertSet(R, insertSet(E, insertSet(L, insertSet(L, 0)))))));
+  set darrell = insertSet(D, insertSet(A, insertSet(R, insertSet(R, insertSet(E, 
+                insertSet(L, insertSet(L, 0)))))));
 
-  printf("me ⋂ vowels = ");
-  printSet(intersectSet(darrell, vowel));
-  nl();
-  printf("me ⋂ consonants = ");
-  printSet(intersectSet(darrell, consonant));
-  nl();
+  printf("me ⋂ vowels = "); printSet(intersectSet(darrell, vowel)); nl();
+  printf("me ⋂ consonants = "); printSet(intersectSet(darrell, consonant)); nl();
 
-  printf("~vowels = ");
-  printSet(~vowel);
-  nl();
-  printf("~consonants = ");
-  printSet(~consonant);
-  nl();
+  printf("~vowels = "); printSet(~vowel); nl();
+  printf("~consonants = "); printSet(~consonant); nl();
 
-  set universe = (1 << 26) - 1;
+  set universe = (1 << (Z + 1)) - 1;
 
   int element = A;
 
