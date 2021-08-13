@@ -1,5 +1,4 @@
-#ifndef _SET_DL
-#define _SET_DL
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -25,5 +24,3 @@ static inline set unionSet(set s, set t) { return (s | t); }
 static inline set intersectSet(set s, set t) { return (s & t); }
 
 static inline set differenceSet(set s, set t) { return (s & ~t); }
-
-#endif
